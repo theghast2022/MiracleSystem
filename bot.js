@@ -705,7 +705,7 @@ client.on('message', async message => {
   }
 });
 client.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find('name', 'Player'));  
+member.addRole(member.guild.roles.find('name', '❃Miracale Tomatoes'));  
 });
 
 client.login(process.env.BOT_TOKEN);
