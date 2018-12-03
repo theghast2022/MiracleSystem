@@ -28,7 +28,7 @@ client.on('message', message => {
 }
 });
 
-const prefix = '$'
+const prefix = '-'
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
@@ -84,31 +84,31 @@ client.on("message", message => {
          .setDescription(`**
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
          __All Commands__
-         $id ➼ عرض ملفك الشخصي
-         $ask ➼ البوت يسئلك اسئلة
-         $server ➼ احصائيات السيرفر
-         $avatar ➼ عرض صورتك الشخصية
-         $roll ➼ القرعة
+         -id ➼ عرض ملفك الشخصي
+         -ask ➼ البوت يسئلك اسئلة
+         -server ➼ احصائيات السيرفر
+         -avatar ➼ عرض صورتك الشخصية
+         -roll ➼ القرعة
          رابط$ ➼ يعطيك رابط شغال ليوم واحد
-         $count ➼ كم عضو بالسيرفر
-         $help ➼ عرض هذه الرسالة
-         $cut ➼ للعب لعبة كت تويت 
-         $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
-         $minc ➼ اسئلة عن ماين كرافت
-         $invite ➼ يقول لك كم واحد انت مدخل
+         -count ➼ كم عضو بالسيرفر
+         -help ➼ عرض هذه الرسالة
+         -cut ➼ للعب لعبة كت تويت 
+         -ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
+         -minc ➼ اسئلة عن ماين كرافت
+         -invite ➼ يقول لك كم واحد انت مدخل
           __Admins Commands__
-         $ban ➼ حظر العضو من السيرفر
-         $kick ➼ طرد العضو من السيرفر
-         $clear ➼ مسح الشات
-         $createroles ➼ عمل رتب متكاملة للسيرفر
-         $clear ➼ ل مسح الشات بعدد محدد
-         $warn ➼ لاعطاء الشخص تحذير
-         $moveall ➼ لسحب جميع الداخلين ب الفويس
-         $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس 
-         $mute ➼ لاعطاء الشخص ميوت
-         $unmute ➼ لفك الميوت عن الشخص
-         $mc ➼ لقفل الشات
-         $umc ➼ لفتح الشات 
+         -ban ➼ حظر العضو من السيرفر
+         -kick ➼ طرد العضو من السيرفر
+         -clear ➼ مسح الشات
+         -createroles ➼ عمل رتب متكاملة للسيرفر
+         -clear ➼ ل مسح الشات بعدد محدد
+         -warn ➼ لاعطاء الشخص تحذير
+         -moveall ➼ لسحب جميع الداخلين ب الفويس
+         -voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس 
+         -mute ➼ لاعطاء الشخص ميوت
+         -unmute ➼ لفك الميوت عن الشخص
+         -mc ➼ لقفل الشات
+         -umc ➼ لفتح الشات 
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
        **  `)
    message.author.sendEmbed(embed)
@@ -226,7 +226,7 @@ client.on('message', function(message) {
     }
 });
 client.on('message', message => {
-if (message.content.startsWith("$kick")) {
+if (message.content.startsWith("-kick")) {
     var mention = message.mentions.members.first();
     if(!mention) return message.channel.send("يجب منشن العضو");
 
@@ -236,7 +236,7 @@ if (message.content.startsWith("$kick")) {
 };
 });
 client.on('message', message => {
-if (message.content.startsWith("$ban")) {
+if (message.content.startsWith("-ban")) {
     var mention = message.mentions.members.first();
     if(!mention) return message.channel.send("يجب منشن العضو");
 
@@ -269,7 +269,7 @@ client.on('message', msg => {
 }
 });
 client.on('message', message => {
-    if (message.content.startsWith("$رابط")) {
+    if (message.content.startsWith("-رابط")) {
 
   message.channel.createInvite({
         thing: true,
@@ -300,7 +300,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content == "$ask") {
+    if (message.content == "-ask") {
          message.react('🤔','👌')
         var x = ['اين يلعب مصطفي فتحي؟', 'ما هو اسم ملعب بارشالونة', 'ما هو يوم الحج الأكبر؟', 'ما هو أطول أنهار أوربا ؟', 'ما هو اسم بيت الدجاج', 'ما هو أول بنك قام بالنشاط المصرفي في السعودية عام 1926م' , 'ما هو أول جامع أقيم في مصر','ما هو أطول نهر في آسيا','ما هو أقرب كوكب إلى الشمس','ما هو الحيوان الذي يُسمى البهنس','ما هو اول مسجد أسس بالمدينة','متى وقع صلح الحديبية عام 6هـ او 3هـ او 2هـ؟','متى قامت أمريكا بأول رحلة فضائية','متى كانت غزوة خيبر؟','ما هي السورة التي تبدأ بقوله تعالى " يا أيها النبي اتق الله ولا تطع الكافرين والمنافقين إن الله كان عليما حكيما ".اجب؟','ما هي السورة التي يطلق عليها عروس القرآن','ماذا يسمى من لايقرأ ولايكتب','ماهي أول دولة استخدمت طابع البريد','ماهو شعار الولايات المتحدة الامريكية','ماهو اذكي الحيوانات','من هو مكتشف أمريكا','مامعنى "فرعون" اجب؟','ماهو اقرب كوكب إلى الارض','ما هي نسبه المياه من الكره الارضيه?','كم عدد السجدات في القرآن الكريم؟','من هو بطل كاس العالم في عام 1966','أين أفتتح اول متحف في العالم?','ماأسم أنثى الحمار?','كم تبلغ درجه حراره الشمس؟','من هي مدينة الضباب','أين توجد أطول سكة حديد في العالم?'
         ];
@@ -327,7 +327,7 @@ client.on('message', message => {
     }
 })
 client.on('message', message => {
-    if (message.content === "$createroles") {
+    if (message.content === "-createroles") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_ROLES`` **Premission**`);
 
@@ -361,7 +361,7 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 
 client.on('message', message => {
 
-    if (message.content === "$count") {
+    if (message.content === "-count") {
 
     let embed = new Discord.RichEmbed()
 
@@ -375,7 +375,7 @@ client.on('message', message => {
 
 client.on('message', async message =>{
     if (message.author.boss) return;
-      var prefix = "$";
+      var prefix = "-";
   
   if (!message.content.startsWith(prefix)) return;
       let command = message.content.split(" ")[0];
@@ -490,7 +490,7 @@ client.on('message', async message =>{
           ]
            
            client.on('message', message => {
-             if (message.content.startsWith("$cut")) {
+             if (message.content.startsWith("-cut")) {
                           if(!message.channel.guild) return message.reply('** This command only for servers**');
             var embed = new Discord.RichEmbed()
             .setColor('RANDOM')
@@ -535,7 +535,7 @@ message.react("??")
 })
 
 client.on('message', message => {
-   if(message.content.startsWith("$invite")) {
+   if(message.content.startsWith("-invite")) {
     message.guild.fetchInvites().then(invs => {
       let user = message.mentions.users.first() || message.author
       let personalInvites = invs.filter(i => i.inviter.id === user.id);
